@@ -7,4 +7,9 @@ class SongList extends React.Component {
   }
 }
 
-export default connect()(SongList);
+const mapStateToProps = (state) => {
+  // "get my state" - all state in redux store
+  return { songs: state.songs };
+};
+
+export default connect(mapStateToProps)(SongList);
